@@ -2,18 +2,19 @@ import { Component, OnInit } from '@angular/core';
 import { WeatherService } from 'src/app/services/weather.service';
 
 @Component({
-  selector: 'app-weather-display-page',
-  templateUrl: './weather-display-page.component.html',
-  styleUrls: ['./weather-display-page.component.scss']
+  selector: 'app-weather-display-current',
+  templateUrl: './weather-display-current.component.html',
+  styleUrls: ['./weather-display-current.component.scss']
 })
-export class WeatherDisplayPageComponent implements OnInit {
+export class WeatherDisplayCurrentComponent implements OnInit {
 
   res: any[] = [];
   formValues;
 
   constructor(private weatherService: WeatherService) { }
 
-  ngOnInit() {}
+  ngOnInit() {
+  }
 
   getFormValues($event) {
     this.formValues = $event;
@@ -22,5 +23,5 @@ export class WeatherDisplayPageComponent implements OnInit {
       console.log(this.res)
     });
   }
-
 }
+
